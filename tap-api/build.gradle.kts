@@ -1,7 +1,6 @@
 plugins {
     id("org.jetbrains.dokka") version "1.5.0"
     `maven-publish`
-    signing
 }
 
 dependencies {
