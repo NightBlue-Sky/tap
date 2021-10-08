@@ -8,7 +8,6 @@ import net.md_5.specialsource.Jar as SpecialJar
 plugins {
     id("org.jetbrains.dokka") version "1.5.0"
     `maven-publish`
-    signing
 }
 
 
@@ -191,10 +190,4 @@ publishing {
             }
         }
     }
-}
-
-signing {
-    isRequired = true
-    sign(tasks.jar.get(), tasks["paperJar"], tasks["sourcesJar"], tasks["dokkaJar"])
-    sign(publishing.publications["tap"])
 }
